@@ -870,8 +870,6 @@ def can_make(to_make, numbers):
         numbers_3 = copy.deepcopy(numbers)
         numbers_4 = copy.deepcopy(numbers)
         try:
-            thing = str(int(to_make))[-len(str(old)):]
-
             if str(int(to_make))[-len(str(old)):] == str(old) and int(to_make) == to_make:
                 return can_make(to_make - old, numbers_2) or can_make(to_make/old, numbers_3) or can_make(int(str(int(to_make))[:-len(str(old))]), numbers_4)
             else:
